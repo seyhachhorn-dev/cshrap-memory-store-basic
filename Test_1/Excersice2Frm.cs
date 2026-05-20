@@ -104,5 +104,32 @@ namespace Test_1
 
             }
         }
+
+        private void Excersice2Frm_KeyDown(object sender, KeyEventArgs e)
+        {
+          
+        }
+
+        private void imgUpload_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imgUpload_textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string path = imgUpload_textBox.Text;
+
+              
+                Bitmap userImage = new Bitmap(path);
+                imageUser_gridView.Rows.Add(userImage);
+
+                // Avoid auto display
+                imageUser_gridView.ClearSelection();
+                pf_pictureBox.Image = null;
+
+            }
+        }
     }
 }

@@ -42,6 +42,7 @@
             this.pf_picturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pf_picturebox.TabIndex = 0;
             this.pf_picturebox.TabStop = false;
+            this.pf_picturebox.Click += new System.EventHandler(this.pf_picturebox_Click);
             // 
             // btn_upload_action
             // 

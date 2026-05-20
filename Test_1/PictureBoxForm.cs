@@ -51,5 +51,10 @@ namespace Test_1
         {
             this.pf_picturebox.Image = global::Test_1.Properties.Resources.SeyhaProfile;
         }
+
+        private void pf_picturebox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

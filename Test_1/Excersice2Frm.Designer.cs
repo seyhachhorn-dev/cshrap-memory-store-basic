@@ -45,6 +45,8 @@
             this.imgUpload_textBox.Name = "imgUpload_textBox";
             this.imgUpload_textBox.Size = new System.Drawing.Size(498, 34);
             this.imgUpload_textBox.TabIndex = 0;
+            this.imgUpload_textBox.TextChanged += new System.EventHandler(this.imgUpload_textBox_TextChanged);
+            this.imgUpload_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.imgUpload_textBox_KeyDown);
             // 
             // pf_pictureBox
             // 
@@ -113,6 +115,7 @@
             this.Name = "Excersice2Frm";
             this.Text = "Excersice2Frm";
             this.Load += new System.EventHandler(this.Excersice2Frm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Excersice2Frm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pf_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUser_gridView)).EndInit();
             this.ResumeLayout(false);

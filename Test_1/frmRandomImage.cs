@@ -85,5 +85,10 @@ namespace Test_1
         {
             randomTimer.Stop();
         }
+
+        private void frmRandomImage_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

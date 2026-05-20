@@ -74,6 +74,7 @@
             this.Name = "frmRandomImage";
             this.Text = "frmRandomImage";
             this.Load += new System.EventHandler(this.frmRandomImage_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmRandomImage_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pf_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
