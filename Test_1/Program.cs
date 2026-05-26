@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Test_1.view;
 
 namespace Test_1
 {
@@ -16,7 +17,7 @@ namespace Test_1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Excersice2Frm());
+            Application.Run(new Login());
         }
     }
 }

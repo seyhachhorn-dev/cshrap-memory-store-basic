@@ -63,6 +63,26 @@ namespace Test_1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imposlogo {
+            get {
+                object obj = ResourceManager.GetObject("imposlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2026_05_20_101410 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2026-05-20 101410", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SeyhaProfile {
             get {
                 object obj = ResourceManager.GetObject("SeyhaProfile", resourceCulture);
