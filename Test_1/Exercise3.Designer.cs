@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_language = new System.Windows.Forms.Label();
+            this.lblLanguage = new System.Windows.Forms.Label();
             this.comboBox_lan = new System.Windows.Forms.ComboBox();
             this.comboBox_city = new System.Windows.Forms.ComboBox();
             this.comboBox_district = new System.Windows.Forms.ComboBox();
@@ -36,21 +36,22 @@
             this.comboBox_village = new System.Windows.Forms.ComboBox();
             this.btn_clear = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCity = new System.Windows.Forms.Label();
+            this.lblDistrict = new System.Windows.Forms.Label();
+            this.lblVillage = new System.Windows.Forms.Label();
+            this.lblCommune = new System.Windows.Forms.Label();
+            this.textBox_address = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lbl_language
+            // lblLanguage
             // 
-            this.lbl_language.AutoSize = true;
-            this.lbl_language.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_language.Location = new System.Drawing.Point(583, 47);
-            this.lbl_language.Name = "lbl_language";
-            this.lbl_language.Size = new System.Drawing.Size(108, 26);
-            this.lbl_language.TabIndex = 0;
-            this.lbl_language.Text = "Language";
+            this.lblLanguage.AutoSize = true;
+            this.lblLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLanguage.Location = new System.Drawing.Point(583, 47);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(108, 26);
+            this.lblLanguage.TabIndex = 0;
+            this.lblLanguage.Text = "Language";
             // 
             // comboBox_lan
             // 
@@ -75,6 +76,7 @@
             this.comboBox_city.Name = "comboBox_city";
             this.comboBox_city.Size = new System.Drawing.Size(357, 40);
             this.comboBox_city.TabIndex = 2;
+            this.comboBox_city.SelectedIndexChanged += new System.EventHandler(this.comboBox_city_SelectedIndexChanged);
             // 
             // comboBox_district
             // 
@@ -87,6 +89,7 @@
             this.comboBox_district.Name = "comboBox_district";
             this.comboBox_district.Size = new System.Drawing.Size(357, 40);
             this.comboBox_district.TabIndex = 3;
+            this.comboBox_district.SelectedIndexChanged += new System.EventHandler(this.comboBox_district_SelectedIndexChanged);
             // 
             // comboBox_commune
             // 
@@ -99,6 +102,8 @@
             this.comboBox_commune.Name = "comboBox_commune";
             this.comboBox_commune.Size = new System.Drawing.Size(357, 40);
             this.comboBox_commune.TabIndex = 4;
+            this.comboBox_commune.SelectedIndexChanged += new System.EventHandler(this.comboBox_commune_SelectedIndexChanged);
+            this.comboBox_commune.SelectedValueChanged += new System.EventHandler(this.comboBox_commune_SelectedIndexChanged);
             // 
             // comboBox_village
             // 
@@ -120,6 +125,7 @@
             this.btn_clear.TabIndex = 7;
             this.btn_clear.Text = "Clear";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_save
             // 
@@ -129,57 +135,68 @@
             this.btn_save.TabIndex = 8;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
-            // label1
+            // lblCity
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 26);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "City/Province";
+            this.lblCity.AutoSize = true;
+            this.lblCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.Location = new System.Drawing.Point(108, 186);
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Size = new System.Drawing.Size(141, 26);
+            this.lblCity.TabIndex = 9;
+            this.lblCity.Text = "City/Province";
             // 
-            // label2
+            // lblDistrict
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 258);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 26);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "District ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblDistrict.AutoSize = true;
+            this.lblDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistrict.Location = new System.Drawing.Point(108, 258);
+            this.lblDistrict.Name = "lblDistrict";
+            this.lblDistrict.Size = new System.Drawing.Size(85, 26);
+            this.lblDistrict.TabIndex = 10;
+            this.lblDistrict.Text = "District ";
+            this.lblDistrict.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // lblVillage
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(108, 389);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 26);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Village";
+            this.lblVillage.AutoSize = true;
+            this.lblVillage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVillage.Location = new System.Drawing.Point(108, 389);
+            this.lblVillage.Name = "lblVillage";
+            this.lblVillage.Size = new System.Drawing.Size(78, 26);
+            this.lblVillage.TabIndex = 11;
+            this.lblVillage.Text = "Village";
             // 
-            // label4
+            // lblCommune
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(108, 324);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 26);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Commune ";
+            this.lblCommune.AutoSize = true;
+            this.lblCommune.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCommune.Location = new System.Drawing.Point(108, 324);
+            this.lblCommune.Name = "lblCommune";
+            this.lblCommune.Size = new System.Drawing.Size(120, 26);
+            this.lblCommune.TabIndex = 12;
+            this.lblCommune.Text = "Commune ";
+            // 
+            // textBox_address
+            // 
+            this.textBox_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_address.Location = new System.Drawing.Point(94, 569);
+            this.textBox_address.Multiline = true;
+            this.textBox_address.Name = "textBox_address";
+            this.textBox_address.Size = new System.Drawing.Size(703, 281);
+            this.textBox_address.TabIndex = 13;
             // 
             // Exercise3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 923);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox_address);
+            this.Controls.Add(this.lblCommune);
+            this.Controls.Add(this.lblVillage);
+            this.Controls.Add(this.lblDistrict);
+            this.Controls.Add(this.lblCity);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.comboBox_village);
@@ -187,7 +204,7 @@
             this.Controls.Add(this.comboBox_district);
             this.Controls.Add(this.comboBox_city);
             this.Controls.Add(this.comboBox_lan);
-            this.Controls.Add(this.lbl_language);
+            this.Controls.Add(this.lblLanguage);
             this.Name = "Exercise3";
             this.Text = "Exercise3";
             this.Load += new System.EventHandler(this.Exercise3_Load);
@@ -198,7 +215,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_language;
+        private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.ComboBox comboBox_lan;
         private System.Windows.Forms.ComboBox comboBox_city;
         private System.Windows.Forms.ComboBox comboBox_district;
@@ -206,9 +223,10 @@
         private System.Windows.Forms.ComboBox comboBox_village;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Button btn_save;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCity;
+        private System.Windows.Forms.Label lblDistrict;
+        private System.Windows.Forms.Label lblVillage;
+        private System.Windows.Forms.Label lblCommune;
+        private System.Windows.Forms.TextBox textBox_address;
     }
 }
