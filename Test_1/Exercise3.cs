@@ -29,6 +29,7 @@ namespace Test_1
             public override string ToString() => Title;
         }
 
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox_lan.SelectedItem == null) return;
@@ -109,8 +110,8 @@ namespace Test_1
             lblVillage.Text = "ភូមិ";
             lblLanguage.Text​ = "ភាសា";
             }
-
         }
+
 
         private void UpdateUILabels()
         {
@@ -136,16 +137,18 @@ namespace Test_1
             }
         }
 
-
+        //method 1 to solve it
         private void comboBox_city_SelectedIndexChanged(object sender, EventArgs e)
         {
             ClearDropdowns(false, true, true, true);
 
-            if (comboBox_city.SelectedItem is ComboBoxItem selectedCity)
-            {
-                LoadLocation(selectedCity.id, comboBox_district);
-            }
+            if (comboBox_city.SelectedItem == null) return;
+
+            ComboBoxItem selectedCity = (ComboBoxItem)comboBox_city.SelectedItem;
+
+            LoadLocation(selectedCity.id, comboBox_district);
         }
+        //method2 to solve it
 
         private void comboBox_district_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -180,9 +183,10 @@ namespace Test_1
             {
 
 
-                if (!string.IsNullOrEmpty(village)) addressPart.Add("ភូមិ" + village);
+                if (!string.IsNullOrEmpty(village)) 
+                    addressPart.Add("ភូមិ" + village);
                 if (!string.IsNullOrEmpty(comm)) addressPart.Add("សង្កាត់" + comm);
-                if (!string.IsNullOrEmpty(dis)) addressPart.Add("ខណ្ឌ" + dis);
+                if (!string.IsNullOrEmpty(dis)) addressPart.Add("ស្រុក/ខណ្ឌ" + dis);
                 if (!string.IsNullOrEmpty(city)) addressPart.Add(city);
 
                 textBox_address.Text = string.Join(" ", addressPart);

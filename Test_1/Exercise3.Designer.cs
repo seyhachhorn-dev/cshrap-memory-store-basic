@@ -119,22 +119,25 @@
             // 
             // btn_clear
             // 
+            this.btn_clear.BackColor = System.Drawing.Color.Khaki;
             this.btn_clear.Location = new System.Drawing.Point(562, 484);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(129, 29);
+            this.btn_clear.Size = new System.Drawing.Size(129, 40);
             this.btn_clear.TabIndex = 7;
             this.btn_clear.Text = "Clear";
-            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.UseVisualStyleBackColor = false;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_save
             // 
+            this.btn_save.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_save.Location = new System.Drawing.Point(736, 484);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(129, 29);
+            this.btn_save.Size = new System.Drawing.Size(129, 40);
             this.btn_save.TabIndex = 8;
             this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // lblCity
